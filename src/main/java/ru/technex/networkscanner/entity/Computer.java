@@ -11,9 +11,11 @@ public class Computer {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-    private String IpAdress;
+    private String IpAddress;
 
     private String compName;
+
+    private int offlineCount;
 
     public Computer() {
     }
@@ -26,12 +28,12 @@ public class Computer {
         this.id = id;
     }
 
-    public String getIpAdress() {
-        return IpAdress;
+    public String getIpAddress() {
+        return IpAddress;
     }
 
-    public void setIpAdress(String ipAdress) {
-        IpAdress = ipAdress;
+    public void setIpAddress(String ipAddress) {
+        IpAddress = ipAddress;
     }
 
     public String getCompName() {
@@ -40,5 +42,13 @@ public class Computer {
 
     public void setCompName(String compName) {
         this.compName = compName;
+    }
+
+    public int getOfflineCount() {
+        return offlineCount;
+    }
+
+    public void setOfflineCount(int offlineCount) {
+        this.offlineCount = offlineCount;
     }
 }
