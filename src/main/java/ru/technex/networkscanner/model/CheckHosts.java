@@ -2,28 +2,26 @@ package ru.technex.networkscanner.model;
 
 import java.io.IOException;
 import java.net.InetAddress;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.HashMap;
+import java.util.Map;
 
 public class CheckHosts {
-    private Set<String> IPSet = new HashSet<>(300);
+    private Map<String, String> IPMap = new HashMap<>(300);
 
     public String checkHosts(String subnet) {
-        int timeout = 1500;
+        int timeout = 1100;
 
         for (int i = 1; i < 255; i++) {
             try {
                 String host = subnet + "." + i;
-                System.out.println(host + InetAddress.getByName(host).isReachable(timeout));
                 if (InetAddress.getByName(host).isReachable(timeout)) {
-                    IPSet.add(host);
-                    System.out.println(IPSet.toString());
+                    IPMap.put(host, InetAddress.getByName(host).getHostName());
                 }
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
 
-        return IPSet.toString();
+        return IPMap.toString();
     }
 }
