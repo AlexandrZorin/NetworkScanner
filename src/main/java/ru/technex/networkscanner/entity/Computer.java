@@ -11,7 +11,7 @@ public class Computer {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-    private String IpAddress;
+    private String ipAddress;
 
     private String compName;
 
@@ -29,11 +29,11 @@ public class Computer {
     }
 
     public String getIpAddress() {
-        return IpAddress;
+        return ipAddress;
     }
 
     public void setIpAddress(String ipAddress) {
-        IpAddress = ipAddress;
+        this.ipAddress = ipAddress;
     }
 
     public String getCompName() {

@@ -8,8 +8,6 @@ import org.springframework.core.env.Environment;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import ru.technex.networkscanner.config.db.HibernateConfig;
-import ru.technex.networkscanner.dao.ComputerDAO;
-import ru.technex.networkscanner.dao.impl.ComputerDAOImpl;
 import ru.technex.networkscanner.model.CheckHosts;
 import ru.technex.networkscanner.model.Scanner;
 import ru.technex.networkscanner.service.ComputerService;
